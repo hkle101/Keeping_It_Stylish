@@ -3,48 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Irish Tricolour Flag</title>
     <style>
-        .Red_Box{
-            width: 100px;
-            height: 100px;
-            background-color: red;
+
+      * {
+
+    margin: 0;
+
+    padding: 0;
+
+    border: 0;
+
+    }
+
+        .wrapper {
+
+            width: 933px;
+
+            height: 800px;
+
+            background-color: rgb(10, 10, 10);
+
         }
-        .Blue_Box{
-            width: 300px;
-            height: 400px;
-            background-color: blue;
-            border: 2px solid red;
-        }
-        .Green_Box{
-            width: 250px;
-            height: 600px;
+
+        .column {  
+
+            display:inline-block;
+
+            height: 100%;
+
+            width: 300px;}
+
+        .column1 {
+
             background-color: green;
-            border-radius: 6px;
+
         }
-        .h1Rule{
-            width: 400px;
-            text-align: center;
-            color: white;
+
+        .column2 {
+
+            background-color: white;
+
         }
-        .h2Rule{
-            width: 800px;
-            text-align: right;
-            color: orange;
+
+        .column3 {
+
+            background-color: orange;
+
         }
-        body {
-            margin: 0px;
-            border: 0px;
-            padding: 0px;
-            background-color: rebeccapurple;
-        }  
+
+        @media (min-width: 1200px) {
+            .wrapper {
+                width: 100vw;
+            }
+            .column {
+                width: 400px;
+            }
+        }
+
+        @media (max-width: 1199px) and (min-width: 900px) {
+            .wrapper {
+                width: 100vw;
+            }
+            .column {
+                width: 33%;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .wrapper {
+                width: 100%;
+                height: 600px;
+            }
+            .column {
+                display: block;
+                width: 100%;
+                height: 200px;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="Red_Box"> </div>
-    <div class="Blue_Box"> </div>
-    <div class="Green_Box"> </div>
-    <h1 class="h1Rule"> This a cool h1 tag </h1>
-    <h2 class="h2Rule"> This is a really cool h2 tag </h2>
+    <div class="wrapper">
+        <div class="column column1"></div>
+        <div class="column column2"></div>
+        <div class="column column3"></div>
+    </div>
 </body>
 </html>
